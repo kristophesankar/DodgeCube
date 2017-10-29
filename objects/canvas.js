@@ -1,0 +1,4 @@
+var Canvas = function(){
+
+  
+}
