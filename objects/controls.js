@@ -8,11 +8,11 @@ Controls.prototype.init = function(player) {
         //alert(String.fromCharCode(e.keyCode) + " --> " + e.keyCode);
 
         if (e.keyCode == 37) {
-            player.moveleft();
+            player.super.moveleft();
         }
 
         if (e.keyCode == 39) {
-            player.moveright();
+            player.super.moveright();
         }
 
     };
