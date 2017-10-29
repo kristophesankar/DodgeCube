@@ -1,24 +1,20 @@
-var Canvas = function(){
-  this.canvas = document.getElementById("canvas");
-  this.context = canvas.getContext("2d");
-  this.player = new Player();
+var Canvas = function() {
+    this.canvas = document.getElementById("canvas");
+    this.context = canvas.getContext("2d");
+    var thisobj = this;
+    var player = new Player();
+    window.setInterval(function() {
+        thisobj.render(player)
+    }, 1000);
+
 }
 
-Canvas.prototype.render = function (object) {
-  this.context.rect(object.super['posx'],object.super['posy'], object.super['height'], object.super['height']);
-  this.context.stroke();
-
+Canvas.prototype.render = function(player) {
+    this.context.clearRect(0, 0, this.canvas.height, this.canvas.width);
+    this.context.fillRect(player.super['posx'], player.super['posy'], player.super['height'], player.super['width']);
+    player.moveright();
 };
 
-Canvas.prototype.init = function () {
-  this.render(this.player);
-  this.clear();
-  this.player.moveright()
-  setTimeout(this.render(this.player), 10000);
-
-
-};
-
-Canvas.prototype.clear = function () {
-  this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+Canvas.prototype.clear = function() {
+    this.context.clearRect(0, 0, this.canvas.height, this.canvas.width);
 };

@@ -3,9 +3,9 @@ var Player = function() {
 };
 
 Player.prototype.moveright = function() {
-    this.super.posx = this.super.posx + 200;
+    this.super.posx = this.super.posx + 20;
 };
 
-Player.prototype.moveright = function() {
+Player.prototype.moveleft = function() {
     this.super.posx = this.super.posx - 20;
 };
