@@ -1,4 +1,4 @@
 var Main = function(){
-  var player = new Player();
-  player.render();
+  var canvas = new Canvas();
+  canvas.init();
 }
