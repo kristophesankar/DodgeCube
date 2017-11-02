@@ -1,0 +1,9 @@
+{
+  "name": "DodgeCube",
+  "version": "1.0.0",
+  "description": "Cube Game",
+  "main": "index.js",
+  "repository": "https://github.com/kristophesankar/DodgeCube",
+  "author": "Kristophe Sankar",
+  "license": "MIT"
+}
