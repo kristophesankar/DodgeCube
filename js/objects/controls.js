@@ -1,19 +1,26 @@
-var Controls = function() {
+var Controls = class Controls {
+
+  constructor() {
     this.moveleftkey = '';
     this.moverightkey = '';
-};
 
-Controls.prototype.init = function(player) {
+  }
+
+  init(player) {
     document.body.onkeydown = function(e) {
-        //alert(String.fromCharCode(e.keyCode) + " --> " + e.keyCode);
+      //alert(String.fromCharCode(e.keyCode) + " --> " + e.keyCode);
 
-        if (e.keyCode == 37) {
-            player.super.moveleft();
-        }
+      if (e.keyCode == 37) {
+        player.moveleft();
+      }
 
-        if (e.keyCode == 39) {
-            player.super.moveright();
-        }
+      if (e.keyCode == 39) {
+        player.moveright();
+      }
 
     };
-};
+  }
+
+}
+
+export {Controls};

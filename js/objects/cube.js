@@ -1,22 +1,29 @@
-var Cube = function(){
-  this.height = 20;
-  this.width = 20;
-  this.posx = 140;
-  this.posy = 260;
-};
+var Cube = class Cube {
 
-Cube.prototype.moveright = function() {
+  constructor() {
+    this.height = 20;
+    this.width = 20;
+    this.posx = 140;
+    this.posy = 260;
+
+  }
+
+  moveright() {
     this.posx = this.posx + 20;
-};
+  };
 
-Cube.prototype.moveleft = function() {
+  moveleft() {
     this.posx = this.posx - 20;
-};
+  };
 
-Cube.prototype.moveup = function() {
+  moveup() {
     this.posy = this.posy - 1;
-};
+  };
 
-Cube.prototype.movedown = function() {
+  movedown() {
     this.posy = this.posy + 1;
-};
+  };
+
+}
+
+export {Cube};

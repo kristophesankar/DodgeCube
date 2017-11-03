@@ -1,7 +1,14 @@
-var Enemy = function() {
-    this.super = new Cube();
-    this.super.height = 5;
-    this.super.width = 5;
-    this.super.posx = 140;
-    this.super.posy = 0;
-};
+import {Cube} from './Cube.js';
+
+var Enemy = class Enemy extends Cube{
+  constructor() {
+    super();
+    this.height = 5;
+    this.width = 5;
+    this.posx = 140;
+    this.posy = 0;
+
+  }
+}
+
+export {Enemy};
